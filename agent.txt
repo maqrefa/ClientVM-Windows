@@ -3,3 +3,5 @@ Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.7.5-
 netsh advfirewall firewall set rule name="File and Printer Sharing (Echo Request - ICMPv4-In)" new enable=yes
 
 MDAxIEFrYmFyIDE5Mi4xNjguMTc4LjIyIGQyOTg2YTE0MDhiZjc3NTY2YzA0Zjk1MDQzMzZjNTVlYzkyYTcwY2JiNTBmYjZhNzgwNWU2ZGE5YzExNWQ0ZmM=
+
+MDAxIGFrYmFyIGFueSAxOTBkYmY2OTNiODRjYjRmOWY1NTJmZWNjNGRmMTJjNzRiZGUyN2Q3ZjhmM2E5ZjE2YTlmNWY5ZTIxNGE2ZDQ5
