@@ -1,0 +1,24 @@
+CREATE DATABASE webdb;
+USE webdb;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nama VARCHAR(50)
+);
+
+INSERT INTO users (nama) VALUES ('Akbar-sama'), ('Hayasaka'), ('Shirogane');
+
+
+<?php
+$host = "localhost";
+$user = "root";
+$pass = "refabar123";
+$db   = "webdb";
+
+$koneksi = mysqli_connect($host, $user, $pass, $db);
+
+if (!$koneksi) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+echo "Koneksi ke database berhasil!";
+?>
