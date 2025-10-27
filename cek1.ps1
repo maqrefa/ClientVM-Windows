@@ -1,5 +1,5 @@
 # === CONFIGURASI ===
-$ManagerIP = "192.168.153.37"
+$ManagerIP = "192.168.1.16"
 $ManagerPort = 1514
 $AgentService = "wazuh"
 $LogSource = "WazuhTest"
@@ -36,3 +36,4 @@ if ($service.Status -ne "Running") {
 }
 
 Write-Host "Done , or tunggu 1-2 min"
+
