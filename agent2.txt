@@ -1,2 +1,26 @@
 Agent key information for '001' is:
 MDAxIFdpbjEwIDE5Mi4xNjguMS4yNCAxNWQ5ZGMzZWU4YWFhNWI4YjYzYjRiM2IwZGFhMmY1OTczYmVmODQ5NWZmNGE0NTcyNTZmMjY5NjVhZGU0ZjFj
+
+<wodle name="system_monitoring">
+  <disabled>no</disabled>
+  <interval>10m</interval>
+  <scan_on_start>yes</scan_on_start>
+  <disk_usage>yes</disk_usage>
+  <cpu_usage>yes</cpu_usage>
+  <memory_usage>yes</memory_usage>
+  <network_usage>yes</network_usage>
+</wodle>
+
+<wodle name="windows_performance_counters">
+  <disabled>no</disabled>
+  <interval>1m</interval>  <counter>\Network Interface(*)\Bytes Total/sec</counter>  <counter>\Network Interface(*)\Packets Received Errors</counter>  <counter>\TCPv4\Segments Retransmitted/sec</counter> </wodle>
+
+<localfile>
+  <log_format>iis</log_format>
+  <location>C:\inetpub\logs\LogFiles\W3SVC1\u_ex*.log</location>
+</localfile>
+
+<localfile>
+  <location>Security</location>
+  <log_format>eventchannel</log_format>
+  <query>Event/System[EventID=4625 or EventID=4624]</query> </localfile>
