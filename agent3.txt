@@ -1,3 +1,12 @@
 Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.7.5-1.msi -OutFile ${env.tmp}\wazuh-agent; msiexec.exe /i ${env.tmp}\wazuh-agent /q WAZUH_MANAGER='192.168.1.64' WAZUH_AGENT_NAME='Refabar' WAZUH_REGISTRATION_SERVER='192.168.1.64' 
 
-Get-Service -Name WazuhSvc | Select-Object Status, DisplayName; & "C:\Program Files (x86)\ossec-agent\agent-control.exe" -i
+<syscheck>
+  <frequency>3600</frequency>
+
+  <directories check_all="yes">C:\Users\Public\Documents</directories>
+
+  <windows_registry>
+    <registry_entry>HKEY_LOCAL_MACHINE\Software\Classes\php</registry_entry>
+  </windows_registry>
+
+</syscheck>
